@@ -23,4 +23,10 @@ class ApifyClient
         $response = $this->client->get('/v2/users/me');
         return \json_decode($response->getBody(), true);
     }
+
+    public function runActor(string $actorId): array
+    {
+        $response = $this->client->post(sprintf('/v2/acts/%s/runs', $actorId));
+        return \json_decode($response->getBody(), true);
+    }
 }
