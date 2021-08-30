@@ -1,0 +1,6 @@
+# PHP Storm settings
+/.idea
+
+# Dependencies
+/vendor
+

@@ -1,0 +1,19 @@
+{
+    "name": "apify/example-php-project",
+    "description": "Example PHP Project",
+    "type": "project",
+    "require": {
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Apify\\ExamplePhpProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pepa",
+            "email": "josef@apify.com"
+        }
+    ]
+}
