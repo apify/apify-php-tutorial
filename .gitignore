@@ -6,3 +6,6 @@
 
 # Credentials
 /examples/settings.php
+
+# Fake "database"
+/examples/database.json
