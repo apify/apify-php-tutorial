@@ -3,6 +3,7 @@
     "description": "Example PHP Project",
     "type": "project",
     "require": {
+        "ext-json": "*",
         "guzzlehttp/guzzle": "^7.3"
     },
     "autoload": {

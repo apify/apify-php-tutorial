@@ -8,10 +8,13 @@ class ApifyClient
 {
     private $client;
 
-    public function __construct()
+    public function __construct(string $token)
     {
         $this->client = new Client([
             'base_uri' => 'https://api.apify.com',
+            'headers' => [
+                'Authorization' => 'Bearer ' . $token,
+            ]
         ]);
     }
 

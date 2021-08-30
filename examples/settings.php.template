@@ -1,0 +1,4 @@
+<?php
+return [
+    'token' => '<YOUR_APIFY_TOKEN>',
+];
