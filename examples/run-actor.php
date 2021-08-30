@@ -5,6 +5,7 @@ require 'vendor/autoload.php';
 $settings = require_once __DIR__ . '/settings.php';
 
 $client = new \Apify\ExamplePhpProject\ApifyClient($settings['token']);
+$db = new \Apify\ExamplePhpProject\FakeDb($settings['fakeDbFile']);
 
 $run = $client->runActor("vdrmota~contact-info-scraper", [
     'startUrls' => [
@@ -12,8 +13,9 @@ $run = $client->runActor("vdrmota~contact-info-scraper", [
     ],
     // We just want to scrape the single page
     'maxDepth' => 0,
-    'sameDomain' => true,
 ]);
+
+$db->save('actorRun', $run);
 
 // Output run as json
 echo \json_encode($run, JSON_PRETTY_PRINT);
