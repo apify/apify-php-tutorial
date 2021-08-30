@@ -24,9 +24,11 @@ class ApifyClient
         return \json_decode($response->getBody(), true);
     }
 
-    public function runActor(string $actorId): array
+    public function runActor(string $actorId, array $input): array
     {
-        $response = $this->client->post(sprintf('/v2/acts/%s/runs', $actorId));
+        $response = $this->client->post(sprintf('/v2/acts/%s/runs', $actorId), [
+            'json' => $input
+        ]);
         return \json_decode($response->getBody(), true);
     }
 }

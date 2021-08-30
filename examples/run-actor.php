@@ -6,7 +6,14 @@ $settings = require_once __DIR__ . '/settings.php';
 
 $client = new \Apify\ExamplePhpProject\ApifyClient($settings['token']);
 
-$run = $client->runActor("vdrmota~contact-info-scraper");
+$run = $client->runActor("vdrmota~contact-info-scraper", [
+    'startUrls' => [
+        ['url' => 'https://www.apify.com/contact']
+    ],
+    // We just want to scrape the single page
+    'maxDepth' => 0,
+    'sameDomain' => true,
+]);
 
 // Output run as json
 echo \json_encode($run, JSON_PRETTY_PRINT);
