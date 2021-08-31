@@ -14,7 +14,7 @@ if (!$datasetId) {
     throw new Exception('Did not found dataset id in database.');
 }
 
-$datasetItems = $client->getDatasetItems($datasetId);
+$datasetItems = $client->getDatasetItems($datasetId, ['fields' => 'instagrams']);
 $db->save('datasetItems', $datasetItems);
 
 echo \json_encode($datasetItems, JSON_PRETTY_PRINT);
