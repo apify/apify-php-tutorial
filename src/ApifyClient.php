@@ -37,4 +37,12 @@ class ApifyClient
         $response = $this->client->get(sprintf('/v2/datasets/%s', $datasetId));
         return \json_decode($response->getBody(), true);
     }
+
+    public function getDatasetItems(string $datasetId, array $query = []): array
+    {
+        $response = $this->client->get(sprintf('/v2/datasets/%s/items', $datasetId), [
+            'query' => $query
+        ]);
+        return \json_decode($response->getBody(), true);
+    }
 }
