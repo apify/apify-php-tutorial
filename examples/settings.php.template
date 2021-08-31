@@ -2,4 +2,5 @@
 return [
     'token' => '<YOUR_APIFY_TOKEN>',
     'fakeDbFile' => __DIR__ . '/database.json',
+    'webhookRequestUrl' => '<GENERATE YOURS AT https://requestbin.com/r>'
 ];
