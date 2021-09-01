@@ -6,5 +6,7 @@ $settings = require_once __DIR__ . '/settings.php';
 
 $client = new \Apify\ApifyPHPTutorial\ApifyClient($settings['token']);
 
+$user = $client->getCurrentUser();
+
 // Output user as json
-echo \json_encode($client->getCurrentUser(), JSON_PRETTY_PRINT);
+echo \json_encode($user, JSON_PRETTY_PRINT);
