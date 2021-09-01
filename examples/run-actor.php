@@ -6,8 +6,8 @@ $settings = require_once __DIR__ . '/settings.php';
 
 // Create services needed further in the example. Your framework will probably allow you to get them via some
 // dependency container.
-$client = new \Apify\ExamplePhpProject\ApifyClient($settings['token']);
-$db = new \Apify\ExamplePhpProject\FakeDb($settings['fakeDbFile']);
+$client = new \Apify\ApifyPHPTutorial\ApifyClient($settings['token']);
+$db = new \Apify\ApifyPHPTutorial\FakeDb($settings['fakeDbFile']);
 
 // Run the specified actor. As a second parameter, you can pass input to it.
 $run = $client->runActor("vdrmota~contact-info-scraper", [

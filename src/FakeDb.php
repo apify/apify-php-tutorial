@@ -1,6 +1,6 @@
 <?php
 
-namespace Apify\ExamplePhpProject;
+namespace Apify\ApifyPHPTutorial;
 
 /**
  * Very simple, DEFINITELY NOT PRODUCTION SUITABLE class

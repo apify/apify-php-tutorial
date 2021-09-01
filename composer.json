@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Apify\\ExamplePhpProject\\": "src/"
+            "Apify\\ApifyPHPTutorial\\": "src/"
         }
     },
     "authors": [

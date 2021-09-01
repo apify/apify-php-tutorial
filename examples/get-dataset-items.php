@@ -6,8 +6,8 @@ $settings = require_once __DIR__ . '/settings.php';
 
 // Create services needed further in the example. Your framework will probably allow you to get them via some
 // dependency container.
-$client = new \Apify\ExamplePhpProject\ApifyClient($settings['token']);
-$db = new \Apify\ExamplePhpProject\FakeDb($settings['fakeDbFile']);
+$client = new \Apify\ApifyPHPTutorial\ApifyClient($settings['token']);
+$db = new \Apify\ApifyPHPTutorial\FakeDb($settings['fakeDbFile']);
 
 // Load the data from database and check if the info we are looking for is actually present
 $actorRun = $db->load('actorRun');

@@ -1,6 +1,6 @@
 <?php
 
-namespace Apify\ExamplePhpProject;
+namespace Apify\ApifyPHPTutorial;
 
 use GuzzleHttp\Client;
 
