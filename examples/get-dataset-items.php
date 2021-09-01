@@ -18,7 +18,7 @@ if (!$datasetId) {
 }
 
 // Use client to get dataset items
-$datasetItems = $client->getDatasetItems($datasetId, ['fields' => 'instagrams']);
+$datasetItems = $client->getDatasetItems($datasetId, []);
 
 // Save dataset items to "database"
 $db->save('datasetItems', $datasetItems);
